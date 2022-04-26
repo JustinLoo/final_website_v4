@@ -1,0 +1,299 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+.popup_box{
+  opacity: 1;
+
+
+}
+
+canvas {
+  position: fixed;
+  height: 100vh;
+  width: 100vh;
+  
+
+ 
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: fill;
+}
+
+::-webkit-scrollbar {
+  display: none;
+
+}
+
+body{
+  font-family: Lato;
+ 
+  
+    
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: 		#202020;
+    --bg-secondary: #161515;
+    --transition-speed: 600ms;
+
+
+}
+
+:root {
+  
+   
+  }
+  
+  body {
+   
+    background-color: white;
+  
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+    
+  }
+  
+  .dark {
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+  }
+  
+  .light {
+    --text-primary: #1f1f1f;
+    --text-secondary: #000000;
+    --bg-primary: #ffffff;
+    --bg-secondary: #e4e4e4;
+  }
+  
+  .solar {
+    --text-primary: #576e75;
+    --text-secondary: #35535c;
+    --bg-primary: #fdf6e3;
+    --bg-secondary: #f5e5b8;
+  }
+  
+  .theme-icon {
+    display: none;
+  }
+  
+  .dark #darkIcon {
+    display: block;
+  }
+  
+  .light #lightIcon {
+    display: block;
+  }
+  
+  .solar #solarIcon {
+    display: block;
+  }
+
+  
+  .click, .popup_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  .click{
+    background: #2981bc;
+    color: white;
+    font-size: 22px;
+    font-family: arial;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    border: 1px solid #0059b3;
+  }
+  .popup_box{
+    height: 18em;
+    width: 35em;
+    background: #f2f2f2;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    z-index: 15;
+    display: none;
+    opacity: 1;
+   
+  }
+  .popup_box i{
+    width: 1rem;
+    height: 1rem;
+    
+    
+    color: #eb9447;
+    border: 5px solid #eb9447;
+    padding: 20px 40px;
+    border-radius: 50%;
+    margin: -10px 0 20px 0;
+   
+  }
+  .popup_box h1{
+    font-size: 2em;
+    color: #1b2631;
+    margin-bottom: 5px;
+    text-align: center;
+   
+    
+  }
+  .popup_box label{
+    font-size: 1.75em;
+    color: #404040;
+  }
+  .popup_box .btns{
+    margin: 40px 0 0 0;
+  }
+  .btns .btn1, .btns .btn2{
+    background: #d42323;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #808080;
+    padding: 10px 13px;
+    text-decoration: none;
+  }
+  .btns .btn2{
+    margin-left: 20px;
+    background: #ff3333;
+    border: 1px solid #cc0000;
+  }
+  .btns .btn1:hover{
+    transition: .5s;
+    background: #8c8c8c;
+   
+  }
+  .btns .btn2:hover{
+    transition: .5s;
+    background: #e60000;
+  }
+
+  .title{
+    text-align: ;
+    letter-spacing: 15px;
+    font-size: 3em;
+   
+    outline:none;
+    font-family: Lato;
+    
+    width: 100%;
+    position: relative;
+    font-family: Lato;
+    letter-spacing: 10px;
+    word-spacing: 5px;
+    text-transform: uppercase;
+    color:rgb(238, 238, 238);
+    font-weight: 300;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), #555555);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+   
+    
+   
+  
+   
+   
+  
+  }
+  
+  @keyframes animate{
+  
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+    {
+        color: #0e3742;
+        text-shadow: none;
+  
+  
+    }
+  
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4,
+  
+  
+  
+    }
+  
+  
+  
+  } 
+  
+
+  @media only screen and (max-width: 600px) {
+    .popup_box{
+      height: 21em;
+      width: 14em;
+      background: #f2f2f2;
+      text-align: center;
+      align-items: center;
+      padding: 40px;
+      border: 1px solid #b3b3b3;
+      box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+      z-index: 15;
+      display: none;
+      opacity: 1;
+     
+    }
+
+    .popup_box h1{
+      font-size: 1.5em;
+      color: #1b2631;
+      margin-bottom: 5px;
+    }
+    .popup_box label{
+      font-size: 1em;
+      color: #404040;
+      text-decoration: none;
+    }
+
+    .btns .btn1, .btns .btn2{
+      background: #999999;
+      color: white;
+      font-size: 1rem;
+      
+    }
+
+    
+  }
+
+
+
+  
+  
+  
+  
+  
+ 
+  
+ 
