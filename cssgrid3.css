@@ -1,0 +1,63 @@
+.grid-container{
+    display:grid;
+    grid-template-columns: repeat(3, .5fr);
+    
+    grid-auto-rows: 9em;
+    z-index: 9;
+
+
+}
+
+.grid-item{
+  
+   
+  
+
+}
+
+.grid-item-1{
+    
+    
+    
+  
+  
+  
+
+    grid-column: 2 / 3;
+    grid-row: 2/7;
+    text-align: center;
+    
+   
+    backdrop-filter: blur(0.2);
+  
+    z-index: 1;
+   
+    padding: 3rem;
+    color: white;
+}
+
+
+.popup_box{
+    opacity: 1;
+
+
+}
+
+.textbox{
+    text-align: center;
+
+
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .grid-item-1{
+        
+
+    }
+
+
+}

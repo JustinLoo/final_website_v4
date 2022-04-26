@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/c07dbebdff.js" crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="navbar.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap');
+      </style>
+
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+      </style>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+      </style>
+
+    <script src="sound.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+
+   
+
+    <link rel="stylesheet" type="text/css" href=" 3.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="download.png">
+    <title>Justin Loo's Website</title> 
+    <script>
+      $(document).ready(function(){
+        $('.click').click(window.onload = function(){
+          $('.popup_box').css("display", "block");
+        });
+        $('.btn1').click(function(){
+          $('.popup_box').css("display", "none");
+        });
+        $('.btn2').click(function(){
+          $('.popup_box').css("display", "none");
+          alert("Account Permanently Deleted.");
+        });
+      });
+
+    </script>
+    <script>
+      function playBG() {
+        var audio = document.getElementById("audio");
+        audio.volume = 0.4;
+        audio.play();
+
+      }
+
+
+      
+
+    </script>
+    
+
+
+
+
+    
+    
+
+   
+
+
+    
+
+    
+  </head>
+  <body>
+
+    <nav class="navbar" data-aos="fade-down-right" data-aos-duration = "1000">
+      <div class="content">
+        <div class="logo">
+          <a href="#">JUSTIN LOO</a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="#">FEATURES</a></li>
+          
+        </ul>
+        <div class="icon menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+
+    
+    <audio id = "whoosh" preload="auto">
+      <source src="whoosh.mp3">
+    </audio>
+
+    
+
+    <video autoplay muted loop id="myVideo">
+      <source src="spacebg/1080p.mp4" type="video/mp4">
+    </video>
+
+  
+
+    <canvas id="bg" ></canvas>   
+
+    <main>
+
+        <div class = "grid-container">
+        
+
+
+     
+
+
+      
+
+
+      
+
+
+
+          <div class="popup_box" >
+
+            <h1>This website is best viewed on devices with bigger screens</h1>
+            <label>using a phone will not give the best results</label>
+            <div class="btns" >
+              <a href="#" class="btn1" onclick="playBG()">Alright!</a>
+              <audio id="audio" src="spaceBG.m4a"></audio>
+            
+
+            
+            </div>
+         </div>
+
+         <div class = "grid-item grid-item-1" data-aos="flip-up" data-aos-duration = "2000">
+          <form class = "formspree" data-aos="flip-down"
+          action="https://formspree.io/f/xbjqzvdw"
+          method="POST"
+        >
+          <label>
+            Your email: <br>  
+            <input class = "textbox" type="email" name="_replyto" style = "margin-bottom: 30px;">
+          </label>
+          <br>
+          <label>
+            Your message: <br>  
+            <textarea style = "resize: none; width: 300px; height: 200px;" class = "textbox" name="message" type = "email"></textarea>
+          </label>
+          <br>
+          <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+        </form>
+          
+            
+          
+            
+         
+            
+
+            
+            
+
+          </div>
+
+
+         <!-- modify this form HTML and place wherever you want your form -->
+
+
+        </div>
+      
+
+         
+
+          
+
+    
+
+
+      
+
+      
+
+    
+     
+
+    
+
+   
+
+
+    
+
+
+    </main>
+
+
+
+
+   
+
+   
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = ()=>{
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      }
+      cancelBtn.onclick = ()=>{
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      }
+      window.onscroll = ()=>{
+        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+      }
+    </script>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
