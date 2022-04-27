@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "swup": "^2.0.14",
     "three": "^0.139.2"
   }
 }
