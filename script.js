@@ -63,6 +63,7 @@ DAT.Globe = function(container, opts) {
 
 	var camera, scene, renderer, w, h;
 	var mesh, atmosphere, point;
+  
 
 	var overRenderer;
 
@@ -133,7 +134,7 @@ DAT.Globe = function(container, opts) {
 
 		point = new THREE.Mesh(geometry);
 
-		renderer = new THREE.WebGLRenderer({ antialias: true });
+		renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 		renderer.setSize(w, h);
 
 		renderer.domElement.style.position = "absolute";
