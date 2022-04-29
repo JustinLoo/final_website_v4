@@ -27,16 +27,36 @@
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="image/x-icon" href="download.png">
-	<title>Justin Loo's Website</title>
+	<title>Justin Loo | Home</title>
 </head>
 
 <body>
+  <audio loop autoplay>
+    <source src="spaceBG.m4a" type="audio/filetype">
+</audio>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/123879/three.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/123879/OrbitControls.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/123879/DeviceOrientationControls.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/123879/StereoEffect.js'></script><script  src="./script.js"></script>
 
   <div class = "transition transition-3 is-active">
    
 
+  </div>
+  <!--
+  <div class = "warning">
+    <div class = "warnbtn">
+      <button>Alright</button>
+    </div>
+    
+   
+
     
   </div>
+  -->
+
+ 
 
   
 	<nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
@@ -55,12 +75,12 @@
 
  
 	
-  
+    <div id="container"></div>
   	<div class="parent">
   		<section id="home">
   			<div class="text-box" data-aos="zoom-in-down" data-aos-duration="2000">
-  				<div class="heading">Welcome to my website</div>
-  				<div class="button-wrapper"> <a class="button" href="about.html">About Me</a> </div>
+  				<div class="heading">"over 100 inspirational <br> quotes to start your day"</div>
+  				<div class="button-wrapper"> <a class="button" href="about.html">inspire Me</a> </div>
   			</div>
   		</section>
   	</div>
@@ -78,84 +98,8 @@
 	<script>
 	AOS.init();
 	</script>
-	<script>
-	const body = document.querySelector("body");
-	const navbar = document.querySelector(".navbar");
-	const menuBtn = document.querySelector(".menu-btn");
-	const cancelBtn = document.querySelector(".cancel-btn");
-	menuBtn.onclick = () => {
-		navbar.classList.add("show");
-		menuBtn.classList.add("hide");
-		body.classList.add("disabled");
-	}
-	cancelBtn.onclick = () => {
-		body.classList.remove("disabled");
-		navbar.classList.remove("show");
-		menuBtn.classList.remove("hide");
-	}
-	window.onscroll = () => {
-		this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-	}
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
-	<script>
-	let scene, camera, renderer, stars, starGeo;
-
-	function init() {
-		scene = new THREE.Scene();
-		camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
-		camera.position.z = 1;
-		camera.rotation.x = Math.PI / 2;
-		renderer = new THREE.WebGLRenderer({
-			alpha: true
-		});
-		renderer.setClearColor(0xffffff, 0);
-		scene.background = null;
-		renderer.setSize(window.innerWidth, window.innerHeight);
-		document.body.appendChild(renderer.domElement);
-		starGeo = new THREE.Geometry();
-		for(let i = 0; i < 6000; i++) {
-			star = new THREE.Vector3(Math.random() * 600 - 300, Math.random() * 600 - 300, Math.random() * 600 - 300);
-			star.velocity = 0;
-			star.acceleration = 0.02;
-			starGeo.vertices.push(star);
-		}
-		let sprite = new THREE.TextureLoader().load('./images/star/star.png');
-		let starMaterial = new THREE.PointsMaterial({
-			color: 0xaaaaaa,
-			size: 0.7,
-			map: sprite
-		});
-		stars = new THREE.Points(starGeo, starMaterial);
-		scene.add(stars);
-		window.addEventListener("resize", onWindowResize, false);
-		animate();
-	}
-
-	function onWindowResize() {
-		camera.aspect = window.innerWidth / window.innerHeight;
-		camera.updateProjectionMatrix();
-		renderer.setSize(window.innerWidth, window.innerHeight);
-	}
-
-	function animate() {
-		starGeo.vertices.forEach(p => {
-			p.velocity += p.acceleration
-			p.y -= p.velocity;
-			if(p.y < -200) {
-				p.y = 200;
-				p.velocity = 0;
-			}
-		});
-		starGeo.verticesNeedUpdate = true;
-		stars.rotation.y += 0.002;
-		renderer.render(scene, camera);
-		requestAnimationFrame(animate);
-	}
-	init();
-	</script>
-	<script>
-	</script>
+	
+	
 </body>
 
 </html>
