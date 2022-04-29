@@ -2,31 +2,33 @@
 <html lang="en">
 
 <head>
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<meta charset=UTF-8 />
-	<link rel="stylesheet" type="text/css" href="css/transition.css"/>
-  <link rel="stylesheet" type="text/css" href="css/cssgrid.css"/>
- 
-  <link rel="stylesheet" type="text/css" href="css/styleabout.css"/>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+	<meta charset="UTF-8" />
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<script src="https://kit.fontawesome.com/c07dbebdff.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/styleabout.css" />
+  <link rel="stylesheet" type="text/css" href="css/transition.css"/>
 	<link rel="stylesheet" type="text/css" href="css/navbar.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-  <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-  <script defer src="transition.js"></script>
 
+  <script src="transition.js"></script>
+	
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai&display=swap');
+	</style>
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 	</style>
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
 	</style>
-	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<script src="sound.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/cssgrid.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="icon" type="image/x-icon" href="download.png">
 	<title>Justin Loo's Website</title>
 	<script>
@@ -53,7 +55,7 @@
 </head>
 
 <body>
-  <div class = "transition transition-2 is-active"></div>
+  <div class = "transition transition-1 is-active"></div>
   
 	<nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
 		<div class="content">
@@ -61,7 +63,7 @@
 			<ul class="menu-list">
 				<div class="icon cancel-btn"> <i class="fas fa-times"></i> </div>
 				<li><a class="menutext" href="index.html">HOME</a></li>
-				<li><a style="pointer-events: none; cursor: default;" class="menutext">ABOUT</a></li>
+				<li class = "is-active"><a class="menutext" href="about.html">ABOUT</a></li>
 				<li><a class="menutext" href="contact.html">CONTACT</a></li>
 				<li><a class="menutext" href="#">FEATURES</a></li>
 			</ul>

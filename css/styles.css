@@ -54,7 +54,7 @@ canvas {
 }
 .text-box {
   font-size: 3em;
-  background: -webkit-linear-gradient(rgb(255, 255, 255), #000000);
+  background: -webkit-linear-gradient(white, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Lato;
