@@ -24,6 +24,8 @@ if (!window.requestAnimationFrame) {
   })();
 }
 
+
+
 /**
  * Set our global variables.
  */
@@ -116,7 +118,10 @@ function init() {
   rotationPoint.add( camera );
 
   // Build the renderer.
-  renderer = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer({
+    
+    alpha: true,
+  });
   element = renderer.domElement;
   renderer.setSize( window.innerWidth, window.innerHeight );
   renderer.shadowMap.enabled;

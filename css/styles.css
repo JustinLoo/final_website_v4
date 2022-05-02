@@ -1,4 +1,6 @@
 body {
+  
+  
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -305,9 +307,10 @@ section {
   }
 
   .title{
-    text-align: ;
+   
+    text-align: center;
     letter-spacing: 15px;
-    font-size: 3em;
+    font-size: 2em;
    
     outline:none;
     font-family: Lato;

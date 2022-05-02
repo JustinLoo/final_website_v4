@@ -170,20 +170,3 @@
   }
 }
 
-.warning{
-  height: 100%;
-  width: 100%;
-  filter: blur(4px);
-
-  
-}
-
-.warnbtn{
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  filter: none;
-}

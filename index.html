@@ -5,6 +5,7 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<meta charset=UTF-8 />
 	<link rel="stylesheet" type="text/css" href="css/transition.css"/>
+  <link rel="stylesheet" type="text/css" href="css/button.css"/>
  
   <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
@@ -31,6 +32,7 @@
 </head>
 
 <body>
+  <audio id="audio" src="spaceBG.mp3"></audio>
   <audio loop autoplay>
     <source src="spaceBG.m4a" type="audio/filetype">
 </audio>
@@ -44,30 +46,48 @@
    
 
   </div>
-  <!--
-  <div class = "warning">
-    <div class = "warnbtn">
-      <button>Alright</button>
+
+   <div id = "warning">
+
+     
+
+     <div class="box">
+
+      <h1>This website is best viewed <br>on devices with larger screens</h1>
+     
+      
     </div>
+
+      <div class="box-3">
+        <div class="btn btn-three">
+          <span>ALRIGHT!</span>
+        </div>
+      </div>
+     
+  
     
    
 
     
   </div>
-  -->
+ 
+
+ 
+  
+ 
 
  
 
   
-	<nav class="navbar" data-aos="fade-down" data-aos-duration="1000">
+	<nav class="navbar">
 		<div class="content">
 			<div class="logo"> <a class="mainlogo">JUSTIN LOO</a> </div>
 			<ul class="menu-list">
 				<div class="icon cancel-btn"> <i class="fas fa-times"></i> </div>
-				<li style="pointer-events: none; cursor: default;" class = "is-active"><a class="menutext" href="">HOME</a></li>
-				<li><a class="menutext" href="about.html">ABOUT</a></li>
-				<li><a class="menutext" href="contact.html">CONTACT</a></li>
-				<li><a class="menutext" href="#">FEATURES</a></li>
+				<li style="pointer-events: none; cursor: default;" class = "is-active fade-in"><a class="menutext" href="">HOME</a></li>
+				<li><a class="menutext fade-in" href="about.html">ABOUT</a></li>
+				<li><a class="menutext fade-in" href="contact.html">CONTACT</a></li>
+				<li><a class="menutext fade-in" href="#">FEATURES</a></li>
 			</ul>
 			<div class="icon menu-btn"> <i class="fas fa-bars"></i> </div>
 		</div>
@@ -78,9 +98,9 @@
     <div id="container"></div>
   	<div class="parent">
   		<section id="home">
-  			<div class="text-box" data-aos="zoom-in-down" data-aos-duration="2000">
+  			<div class="text-box">
   				<div class="heading">"over 100 inspirational <br> quotes to start your day"</div>
-  				<div class="button-wrapper"> <a class="button" href="about.html">inspire Me</a> </div>
+  				<div class="button-wrapper"> <a class="button fade-in" href="about.html">inspire Me</a> </div>
   			</div>
   		</section>
   	</div>
@@ -89,14 +109,35 @@
 
             
 	<script>
-	function play() {
-		var audio = document.getElementById("audio");
-		audio.play();
-	}
+    $('.navbar').ready(function() {
+     
+       $('.navbar').hide();
+    });
+
+    $('.parent').ready(function() {
+     
+       $('.parent').hide();
+    });
+    
+
+   
+  
+     $('#warning .box-3').on('click', function() {
+      $('#warning').fadeOut(1000);
+       $('.navbar').fadeIn(4000);
+       $('.parent').fadeIn(4000);
+       
+      
+      
+     
+    });
+
+   
+	
 	</script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
-	AOS.init();
+	
 	</script>
 	
 	
